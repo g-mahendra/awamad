@@ -4,8 +4,8 @@ const fs = require("fs");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: myEmail,
-    pass: myPassword,
+    user: "mahendragharge2000@gmail.com",
+    pass: '9823959071',
   },
 });
 
@@ -13,8 +13,8 @@ fs.readFile("sample2.html", (err, data) => {
   if (err) res.write(err);
   else {
     var mailOptions = {
-      from: myEmail,
-      to: myAnotherEmail,
+      from: 'mahendragharge2000@gmail.com',
+      to: 'mahendragharge2000@gmail.com',
       subject: "AWAMAD Practicle 3",
       html: data,
     };

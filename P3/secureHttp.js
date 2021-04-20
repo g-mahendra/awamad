@@ -14,6 +14,7 @@ const httpsServer = https.createServer(options, (req, res) => {
     if (err) res.write(err);
     else {
       res.write(data);
+      res.end();
     }
   });
 });
