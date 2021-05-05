@@ -25,11 +25,11 @@ app.get("/class", (req, res) => {
 });
 
 //batch route with param id
-app.get("/class/batch/:id", (req, res) => {
+app.get("/class/batch/:name", (req, res) => {
   const data = JSON.parse(fs.readFileSync("./class.json"));
   var reqBatch = {};
   data.batches.map((batch) => {
-    if (batch.id == req.params.id) reqBatch = batch;
+    if (batch.id == req.params.name) reqBatch = batch;
   });
   console.log(reqBatch);
   const result = {
